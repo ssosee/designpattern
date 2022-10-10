@@ -11,11 +11,12 @@ public class Seaung implements Observer, Person {
 
     public Seaung(Newspaper newspaper) {
         this.newspaper = newspaper;
+        newspaper.registerObserver(this);
     }
 
     @Override
-    public void update(NewspaperDto newspaperDto) {
-        this.newspaperDto = newspaperDto;
+    public void update() {
+        this.newspaperDto = newspaper.getNewspaperDto();
         status();
     }
 

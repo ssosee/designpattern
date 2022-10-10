@@ -28,12 +28,16 @@ public class Newspaper implements Subject {
     @Override
     public void notifyObserver() {
         for(Observer observer : this.observers) {
-            observer.update(newspaperDto);
+            observer.update();
         }
     }
 
     public void changeNewspaperDto(NewspaperDto newspaperDto) {
         this.newspaperDto = newspaperDto;
         notifyObserver();
+    }
+
+    public NewspaperDto getNewspaperDto() {
+        return this.newspaperDto;
     }
 }
