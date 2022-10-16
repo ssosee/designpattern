@@ -1,8 +1,6 @@
 package kr.ac.uos.designpattern.lecture.command.command;
 
-import kr.ac.uos.designpattern.lecture.command.receiver.Device;
 import kr.ac.uos.designpattern.lecture.command.receiver.Stereo;
-import kr.ac.uos.designpattern.lecture.command.receiver.StereoImpl;
 
 public class StereoOnWithCDCommand implements Command {
 
@@ -17,5 +15,10 @@ public class StereoOnWithCDCommand implements Command {
         stereo.on();
         stereo.setCd();
         stereo.setVolume(11);
+    }
+
+    @Override
+    public void undo() {
+        stereo.off();
     }
 }

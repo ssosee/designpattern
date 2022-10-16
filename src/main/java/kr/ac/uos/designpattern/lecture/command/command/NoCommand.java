@@ -8,4 +8,9 @@ public class NoCommand implements Command {
     public void execute() {
         System.out.println("커맨드가 없습니다.");
     }
+
+    @Override
+    public void undo() {
+        System.out.println("커맨드가 없습니다.");
+    }
 }

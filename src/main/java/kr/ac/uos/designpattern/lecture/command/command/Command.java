@@ -7,4 +7,5 @@ package kr.ac.uos.designpattern.lecture.command.command;
  */
 public interface Command {
     void execute();
+    void undo();
 }

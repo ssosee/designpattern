@@ -1,7 +1,7 @@
 package kr.ac.uos.designpattern.lecture.strategy.duck;
 
-import kr.ac.uos.designpattern.lecture.strategy.fly.FlyNoWay;
 import kr.ac.uos.designpattern.lecture.strategy.quack.Quack;
+import kr.ac.uos.designpattern.lecture.strategy.fly.FlyNoWay;
 
 public class ModelDuck extends Duck {
 
