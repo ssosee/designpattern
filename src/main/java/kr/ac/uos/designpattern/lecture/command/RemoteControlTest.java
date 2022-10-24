@@ -1,5 +1,6 @@
 package kr.ac.uos.designpattern.lecture.command;
 
+import kr.ac.uos.designpattern.lecture.command.command.Command;
 import kr.ac.uos.designpattern.lecture.command.command.GarageDoorOpenCommand;
 import kr.ac.uos.designpattern.lecture.command.command.LightOnCommand;
 import kr.ac.uos.designpattern.lecture.command.invoker.SimpleController;
