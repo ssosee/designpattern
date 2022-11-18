@@ -1,9 +1,10 @@
 package kr.ac.uos.designpattern.lecture.iterator;
 
+import kr.ac.uos.designpattern.lecture.iterator.composite.MenuComponent;
 import lombok.Getter;
 
 @Getter
-public class MenuItem {
+public class MenuItem extends MenuComponent {
     private String name;
     private String description;
     private boolean vegetarian;
@@ -14,5 +15,14 @@ public class MenuItem {
         this.description = description;
         this.vegetarian = vegetarian;
         this.price = price;
+    }
+    @Override
+    public void print() {
+        System.out.print("  "+getName());
+        if(isVegetarian()) {
+            System.out.print("(v)");
+        }
+        System.out.print(", "+getPrice());
+        System.out.println("    -- "+getDescription());
     }
 }

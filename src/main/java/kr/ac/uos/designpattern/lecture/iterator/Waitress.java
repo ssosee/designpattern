@@ -1,22 +1,19 @@
 package kr.ac.uos.designpattern.lecture.iterator;
 
+import kr.ac.uos.designpattern.lecture.iterator.composite.MenuComponent;
+
 import java.util.Iterator;
 import java.util.List;
 
 public class Waitress {
-    private List<Menu> menus;
-    private Menu pancakeHouseMenu;
-    private Menu dinerMenu;
-    private Menu cafeMenu;
+    private MenuComponent allMenus;
 
-    public Waitress(List<Menu> menus) {
-        this.menus = menus;
+    public Waitress(MenuComponent allMenus) {
+        this.allMenus = allMenus;
     }
 
     public void printMenu() {
-        for(Menu menu : menus) {
-            printMenu(menu.createIterator());
-        }
+        allMenus.print();
     }
 
     private void printMenu(Iterator<MenuItem> iterator) {
