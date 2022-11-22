@@ -1,7 +1,7 @@
 package kr.ac.uos.designpattern.lecture.singleton;
 
 public class Singleton {
-    public Singleton() {
+    private Singleton() {
     }
 
     public static Singleton getInstance() {
