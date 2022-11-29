@@ -9,6 +9,7 @@ import kr.ac.uos.designpattern.lecture.decorator.decorator.Soy;
 public class Starbucks {
     public static void main(String[] args) {
         Beverage beverage1 = new Espresso();
+        beverage1 = new Soy(beverage1);
         System.out.println("beverage = " + beverage1.getDescription()+" $"+beverage1.cost());
 
         Beverage beverage2 = new HouseBlend();
