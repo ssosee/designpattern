@@ -1,6 +1,6 @@
-package kr.ac.uos.designpattern.lecture.factory.pizza;
+package kr.ac.uos.designpattern.practice.factory.abstractt.pizza;
 
-import kr.ac.uos.designpattern.lecture.factory.pizza.ingredient.PizzaIngredientFactory;
+import kr.ac.uos.designpattern.practice.factory.abstractt.factory.PizzaIngredientFactory;
 
 public class CheesePizza extends Pizza {
 
@@ -12,9 +12,8 @@ public class CheesePizza extends Pizza {
 
     @Override
     public void prepare() {
-        System.out.println("준비 중:"+ getName());
-        setDough(ingredientFactory.createDough());
-        setSauce(ingredientFactory.createSauce());
+        System.out.println("피자 재료 선택!");
         setCheese(ingredientFactory.createCheese());
+        setDough(ingredientFactory.createDough());
     }
 }
